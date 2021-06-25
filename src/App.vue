@@ -1,27 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="wrap">
+    <listItem class="listItem" />
+  </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
-
-@Options({
-  components: {
-    HelloWorld,
+import { defineComponent } from "vue";
+import listItem from "@/components/listItem.vue";
+export default defineComponent({
+  components: { listItem },
+  setup: () => {
+    return {
+      name: "11",
+    };
   },
-})
-export default class App extends Vue {}
+});
 </script>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="less" scoped>
+@import "./assets/css/reset.css";
+
+.listItem {
+  height: 100%;
+  background-color: gray;
 }
 </style>
+>
