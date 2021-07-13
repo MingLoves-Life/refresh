@@ -63,7 +63,7 @@ export default defineComponent({
       if (moveY > 40) {
         loading();
         setTimeout(() => {
-          headText.value = textList[4];
+          headText.value = textList[3];
           loadingFinish();
           listData.value = listData.value.reverse();
         }, 2000);
